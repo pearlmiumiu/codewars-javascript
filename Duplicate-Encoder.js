@@ -39,3 +39,26 @@ function duplicateEncode(word){
     })
     .join('');
 }
+
+//solution 3
+function duplicateEncode(word){
+    // ...
+    obj={}
+    word=word.toLowerCase()
+    for (var i=0; i<word.length;i++){
+      if (!obj.hasOwnProperty(word[i])){   //if (!(word[i] in obj))
+        obj[word[i]]=1
+      }else{
+        obj[word[i]]+=1
+      }
+      
+    }
+    //console.log(obj)
+    res=''
+    for (var i=0; i<word.length; i++){
+      if (obj[word[i]]===1) {res+='('}
+      else res+=')'
+    }
+    return res
+}
+
