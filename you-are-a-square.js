@@ -18,7 +18,7 @@ var isSquare = function(n){
 
 //solution 2
 function isSquare(n) {
-  return Math.sqrt(n) % 1 === 0;
+  return Math.sqrt(n) % 1 === 0;  //if Math.sqrt(n)%1===0, means the sqrt is an integer
 }
 
 const isSquare = n => Number.isInteger(Math.sqrt(n));
